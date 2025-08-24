@@ -1,0 +1,106 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Nostra – Collections</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav">
+      <a class="brand" href="index.html">Nostra</a>
+      <button class="hamburger" aria-label="Toggle menu" aria-expanded="false">☰</button>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a class="active" href="collections.html">Collections</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="container">
+    <h1>Our Collections</h1>
+
+    <div class="controls">
+      <input id="searchBar" type="text" placeholder="Search products…" aria-label="Search products" />
+      <select id="filterCategory" aria-label="Filter by category">
+        <option value="all">All categories</option>
+        <option value="men">Men</option>
+        <option value="women">Women</option>
+        <option value="accessories">Accessories</option>
+      </select>
+      <button id="clearFilters" class="btn outline">Clear</button>
+    </div>
+
+    <p class="muted">Showing <span id="resultCount">0</span> item(s)</p>
+
+    <div id="productList" class="product-list">
+      <article class="product" data-name="Men's Jacket" data-category="men">
+        <div class="product-media">
+          <img src="images/mens-jacket.png" alt="Men's Jacket" loading="lazy" decoding="async" />
+        </div>
+        <div class="product-body">
+          <h3>Men's Jacket</h3>
+          <p class="price">₹2,499</p>
+          <button class="btn add">Add to cart</button>
+        </div>
+      </article>
+
+      <article class="product" data-name="Women's Dress" data-category="women">
+        <div class="product-media">
+          <img src="images/womens-dress.png" alt="Women's Dress" loading="lazy" decoding="async" />
+        </div>
+        <div class="product-body">
+          <h3>Women's Dress</h3>
+          <p class="price">₹1,999</p>
+          <button class="btn add">Add to cart</button>
+        </div>
+      </article>
+
+      <article class="product" data-name="Analog Watch" data-category="accessories">
+        <div class="product-media">
+          <img src="images/analog-watch.png" alt="Analog Watch" loading="lazy" decoding="async" />
+        </div>
+        <div class="product-body">
+          <h3>Analog Watch</h3>
+          <p class="price">₹1,299</p>
+          <button class="btn add">Add to cart</button>
+        </div>
+      </article>
+
+      <article class="product" data-name="Men's Shoes" data-category="men">
+        <div class="product-media">
+          <img src="images/mens-shoes.png" alt="Men's Shoes" loading="lazy" decoding="async" />
+        </div>
+        <div class="product-body">
+          <h3>Men's Shoes</h3>
+          <p class="price">₹2,199</p>
+          <button class="btn add">Add to cart</button>
+        </div>
+      </article>
+
+      <article class="product" data-name="Handbag" data-category="women">
+        <div class="product-media">
+          <img src="images/handbag.png" alt="Handbag" loading="lazy" decoding="async" />
+        </div>
+        <div class="product-body">
+          <h3>Handbag</h3>
+          <p class="price">₹1,499</p>
+          <button class="btn add">Add to cart</button>
+        </div>
+      </article>
+    </div>
+
+    <div id="noResults" class="no-results" style="display:none;">
+      No products found. Try another search or clear filters.
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <p>© <span id="year"></span> Nostra. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
